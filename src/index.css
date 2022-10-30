@@ -1,0 +1,180 @@
+body {
+  margin: 0;
+  @import url('https://fonts.googleapis.com/css2?family=Abel&family=Courgette&family=Gentium+Plus:ital,wght@1,700&family=Kanit:wght@300&family=Lobster+Two&family=Oswald:wght@300;400&display=swap');
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(248, 250, 252);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.navbar{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(56, 55, 53);
+  flex-wrap: wrap;
+  color: aliceblue;
+}
+.nav-links{
+  margin-right: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+.main{
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  
+  flex-wrap: wrap;
+}
+.buttons1{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 6rem;
+}
+.buttons2{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 6rem;
+}
+.butto{
+  display: none;
+}
+
+.buttons1 Link{
+  text-decoration: none;
+}
+.btn{
+  height: 2rem;
+  border-radius: 0.5rem;
+  background-color: whitesmoke;
+  color: black !important;
+  text-decoration: none;
+}
+.link{
+  text-decoration: none;
+  color: black!important;
+}
+
+.mainFinanace{
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 6rem;
+  /* margin-top: 2rem; */
+  
+  color: black;
+  /* height: 90vh; */
+}
+.top-levels{
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  color: black;
+  flex-wrap: wrap;
+}
+.lower-levels{
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  color: black;
+  flex-wrap: wrap;
+}
+
+.finance-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.std-form{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: rgb(66, 62, 55);
+  width: 55%;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.std-form input{
+  width: 16rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  height: 1.3rem;
+}
+.totalexpense{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* fees */
+.students-fees{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+
+.students-fees p{
+  text-decoration: dashed;
+}
+
+/* general-form */
+.general-form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.form-general{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(170, 170, 151);
+  color: rgb(7, 7, 7);
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  
+}
+.inputs{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.inputs input{
+  border-radius: 3px;
+  height: 1.5rem;
+  width: 12rem;
+}
