@@ -145,15 +145,21 @@ body {
 
 /* general-form */
 .general-form{
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+margin-top: 100px;
+  
+ 
+
+
+  
 
 }
 
-.form-general{
+/* .form-general{
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -165,16 +171,99 @@ body {
   padding: 1rem;
   border-radius: 1rem;
   
+} */
+form{
+  /* width: 70%; */
+  margin-left: 5%;
+  display: flex;
+ 
+  flex-direction: column;
+  font-size: 15px;
+  /* align-items: center;
+  justify-content: center;
+  
+ 
+  color: rgb(7, 7, 7);
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;  */
 }
-.inputs{
+/* .inputs{
   display: flex;
   flex-direction: row;
   gap: 2rem;
   flex-wrap: wrap;
-}
+} */
 
 .inputs input{
   border-radius: 3px;
   height: 1.5rem;
   width: 12rem;
 }
+.loginputs,.reginputs{
+  height: 50px;
+  width: 250px;
+  background-color:rgb(232, 240, 254);
+ 
+  text-align: center;
+  border: 1px white solid;
+  border-radius: 4px;
+  color: white;
+  font-size: 18px;
+}
+#loginform,#regform{
+  margin-left: 42%;
+  margin-right: 50%;
+ 
+ /* display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center; */
+
+}
+#loginemail{
+  margin-top: 150px;
+}
+#loginpassword{
+  margin-top: 50px;
+}
+.loginbtn,.regbtn{
+  height: 50px;
+  width: 256px;
+  background-color:rgb(217, 150, 24);
+  margin-top: 50px;
+  border: white solid 1px;
+  border-radius: 4px;
+ 
+}
+.loginbtn:hover,.regbtn:hover{
+  background-color: gray;
+}
+#regform{
+  margin-top: 100px;
+}
+.reginputs{
+  margin-bottom: 20px;
+}
+.regbtn{
+  margin-top: 10px;
+}
+label{
+  font-size: 15px;
+  font-weight: 100px;
+  color: rgb(0, 0, 0);
+}
+.Minputs{
+  height: 50px;
+  width: 250px;
+  background-color: rgb(232, 240, 254);;
+  margin-bottom: 30px;
+  text-align: center;
+  border: 1px rgb(255, 255, 255) solid;
+  border-radius: 4px;
+  color: white;
+  font-size: 18px;
+ 
+  
+}
+
