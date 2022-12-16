@@ -7,6 +7,8 @@ import Navbar from './components/Navbar';
 import Main from './pages/Main';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Kitchenform from './pages/Boarding/Kitchenform';
+import Medicalform from './pages/Boarding/Medicalform';
 import Library from './pages/Library';
 import Store from './pages/Store';
 import Boarding from './pages/Boarding';
@@ -26,6 +28,14 @@ import Booksin from './pages/library/Booksin';
 import BooksOut from './pages/library/BooksOut';
 import UsersLib from './pages/library/UsersLib';
 import ReturnBook from './pages/library/ReturnBook';
+import Exammarkentry from './pages/exam/Exammarkentry';
+import Studentstokens from './pages/exam/Studentstokens';
+
+
+import Storesupplies from './pages/Store/Storesupplies';
+import Storeissues from './pages/Store/Storeissues';
+// import Info from './pages/Information/Info';
+
 function App() {
   return (
    <BrowserRouter>
@@ -59,6 +69,28 @@ function App() {
     <Route path="/booksout" element={<BooksOut/>} />
     <Route path="/users" element={<UsersLib/>} />
     <Route path="/registration" element={<LibRegistration/>} />
+    {/* boarding */}
+    
+    
+        <Route path={"/Kitchenform" } element={<Kitchenform/>} exact/>
+        <Route path={"/Medicalform"} element={<Medicalform/>} exact/>
+    {/* exam */}
+
+    <Route path={"/Exammarkentry" } element={<Exammarkentry/>} exact/>
+        <Route path={"/Studentstokens"} element={<Studentstokens/>} exact/>
+
+        {/* store*/}
+        <Route path={"/Storesupplies" } element={<Storesupplies/>} exact/>
+        <Route path={"/Storeissues"} element={<Storeissues/>} exact/>
+          
+        {/* <Route path={"/Info"} element={<Info/>} exact/> */}
+       
+
+
+       
+       
+    
+   
    </Routes>
    </BrowserRouter>
   );

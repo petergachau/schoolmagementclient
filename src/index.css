@@ -3,9 +3,10 @@ body {
   @import url('https://fonts.googleapis.com/css2?family=Abel&family=Courgette&family=Gentium+Plus:ital,wght@1,700&family=Kanit:wght@300&family=Lobster+Two&family=Oswald:wght@300;400&display=swap');
   padding: 0;
   box-sizing: border-box;
-  background-color: rgb(248, 250, 252);
+  background-color: rgb(62, 84, 86);
   font-weight: 700;
   font-size: 1.1rem;
+  
 }
 
 .navbar{
@@ -30,7 +31,7 @@ body {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  
+ 
   flex-wrap: wrap;
 }
 .buttons1{
@@ -54,16 +55,17 @@ body {
 .buttons1 Link{
   text-decoration: none;
 }
-.btn{
+/* .btn{
   height: 2rem;
   border-radius: 0.5rem;
   background-color: whitesmoke;
   color: black !important;
   text-decoration: none;
-}
+} */
 .link{
   text-decoration: none;
-  color: black!important;
+  /* color: black!important; */
+  color: rgb(255, 255, 255) !important;
 }
 
 .mainFinanace{
@@ -214,6 +216,7 @@ form{
 #loginform,#regform{
   margin-left: 42%;
   margin-right: 50%;
+
  
  /* display: flex;
  flex-direction: column;
@@ -221,8 +224,16 @@ form{
  justify-content: center; */
 
 }
+#loginform{
+  margin-top: 100px;
+}
 #loginemail{
-  margin-top: 150px;
+  margin-top: 0px;
+}
+.headerform{
+ font-size: 17px;
+ margin-left: 100%;
+ color: rgb(255, 166, 0);
 }
 #loginpassword{
   margin-top: 50px;
@@ -240,10 +251,10 @@ form{
   background-color: gray;
 }
 #regform{
-  margin-top: 100px;
+  margin-top: 60px;
 }
 .reginputs{
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 .regbtn{
   margin-top: 10px;
@@ -261,9 +272,79 @@ label{
   text-align: center;
   border: 1px rgb(255, 255, 255) solid;
   border-radius: 4px;
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 18px;
  
   
 }
+.checkbox{
+  height: 30px;
+  width: 150px;
+
+
+}
+
+.checkboxes{
+  display: inline;
+ 
+  margin-bottom: 30px;
+ 
+  font-size: 18px;
+}
+.photoinput{
+ 
+ 
+  margin-bottom: 30px;
+ 
+  font-size: 18px;
+}
+.btnclass{
+  
+  display: flex;
+  flex-direction: row;
+  gap: 15%;
+  margin-left: 16%;
+}
+
+
+ .btnclass button {
+  background-color: rgb(141, 136, 132);
+ 
+  height: 40px;
+  width: 200px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  border: orange 1px solid;
+ 
+  
+  
+} 
+.btnclass button:hover{
+  background-color: bisque;
+  border: rgb(255, 162, 0) 1px solid;
+}
+.btnpage{
+ display: flex;
+ flex-direction: row;
+ gap: 50%;
+ margin-top: 5%;
+ margin-left: 18%;
+}
+.linklink{
+  text-decoration: none;
+  color: rgb(0, 0, 0)
+}
+ button{
+  background-color: rgb(112, 111, 111);
+  border: 1px orange solid;
+  border-radius: 3px;
+  width: 180px;
+  height: 35px;
+  
+ 
+ }
+ ::placeholder{
+  color: black;
+  opacity: 1;
+ }
 

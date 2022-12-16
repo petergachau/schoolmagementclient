@@ -26,21 +26,22 @@ const Register = () => {
   return (
     <div>
       <form id='regform' onSubmit={handlesubmit}>
-       <label htmlFor="email">Name</label>
+      <h4 className='headerform'>Register</h4>
+      
        
       <input className='reginputs' placeholder='Name' name='name' id='regname'
       onChange={handlechange}/>
       
-      <label htmlFor="email">Email</label>
+     
       <input className='reginputs' placeholder='Email' name='email' id='regemail'
       onChange={handlechange}/>
       
-      <label htmlFor="password">Password</label>
+      
         <input className='reginputs' placeholder='Password' name='password' id='regpassword'
         onChange={handlechange}
         />
 
-        <label htmlFor="regconfpassword">ConfirmPassword</label>
+       
         <input className='reginputs' placeholder='confirm password' name='confirmpassword' id='regconfpassword'
         onChange={handlechange}/>
         <button className='regbtn'>Register</button>

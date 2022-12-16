@@ -13,6 +13,7 @@ const Main = () => {
          <button className="btn"><Link className='link' to='/exam' >Exams Department</Link></button>
         <button className="btn"><Link className='link' to='/queries' >Queries Department</Link></button>
         <button className="btn"><Link className='link' to='/allreports' >All Reports Department</Link></button>
+        <button className="btn"><Link className='link' to='/boarding' >Boarding Department</Link></button>
         
        </div>
        

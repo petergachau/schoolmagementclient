@@ -23,6 +23,7 @@ function Storeissues() {
   return (
     <div>
        <div className="general-form">
+       <h4 style={{ color:  'rgb(255, 157, 0)'}}>Store Issues</h4>
            <form >
            <label htmlFor="itemdescription">Book id</label>
         <input name='itemdescription' id='itemdescription' className='Minputs' placeholder='itemdescription'
@@ -49,11 +50,14 @@ function Storeissues() {
          onChange={handlechange}
          value={Storeissuesdata.issuingofficer}/> 
 
-        <button>Back</button> 
-    <button>Delete</button> 
-    <button  onClick={handlesubmit}>Save</button>
+      
     </form>
     </div>
+    <div className='btnclass'>
+        <button>Back</button> 
+        <button>Delete</button> 
+        <button onClick={handlesubmit}>Save</button>
+        </div>
     </div>
   )
 }

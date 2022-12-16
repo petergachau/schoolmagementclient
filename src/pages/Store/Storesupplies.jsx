@@ -23,6 +23,8 @@ function Storesupplies() {
   return (
     <div>
        <div className="general-form">
+       <h4 style={{ color:  'rgb(255, 157, 0)'}}>Store Supplies</h4>
+        <form >
          <label htmlFor="itemdescription">Book id</label>
         <input name='itemdescription' id='itemdescription' className='Minputs' placeholder='itemdescription'
         onChange={handlechange}
@@ -33,8 +35,8 @@ function Storesupplies() {
         onChange={handlechange}
         value={Storesuppliesdata.quantitysupplied}/>
 
-        <label htmlFor="date" >Book title</label>
-        <input type="text" name='date' placeholder='date' className='date' id='date'
+        <label htmlFor="date" >Date</label>
+        <input type="date" name='date' placeholder='date' className='Minputs'  id='date' 
         onChange={handlechange} 
         value={Storesuppliesdata.date}/>
 
@@ -43,10 +45,14 @@ function Storesupplies() {
         onChange={handlechange}
         value={Storesuppliesdata.suppliername}/>
 
-        <button>Back</button> 
-    <button>Delete</button> 
-    <button onClick={handlesubmit}>Save</button>
+     
+    </form>
     </div>
+    <div className='btnclass'>
+        <button>Back</button> 
+        <button>Delete</button> 
+        <button onClick={handlesubmit}>Save</button>
+        </div>
     </div>
   )
 }

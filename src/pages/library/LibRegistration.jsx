@@ -14,7 +14,7 @@ const [form,setForm]=useState({
 
   return (
     <div className="general-form">
-      <h4 style={{backgroundColor:'orange'}}>Registration</h4>
+      <h4 style={{ color:  'rgb(255, 157, 0)'}}>Registration</h4>
       <form >
         
           <label htmlFor="">Name</label>

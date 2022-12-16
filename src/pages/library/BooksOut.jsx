@@ -22,6 +22,7 @@ const BooksOut = () => {
   return (
     <div>
        <div className="general-form">
+       <h4 style={{ color:  'rgb(255, 157, 0)'}}>Books out</h4>
        <form>
         <label htmlFor="stdname">Student Name</label>
         <input name='stdname' id='stdname' className='Minputs' placeholder='Student name'
@@ -43,12 +44,16 @@ const BooksOut = () => {
         <input type="date" placeholder='Date'  className='Minputs' id='date' name='date'
         onChange={handlechange}
         value={Booksoutdata.date} />
-        <button>Back</button> 
-        <button>Delete</button> 
-        <button onClick={handlesubmit}>Save</button>
+
+       
 
        </form>
        </div>
+       <div className='btnclass'>
+        <button>Back</button> 
+        <button>Delete</button> 
+        <button onClick={handlesubmit}>Save</button>
+        </div>
 
     </div>
   )

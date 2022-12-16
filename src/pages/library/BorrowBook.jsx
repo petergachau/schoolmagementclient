@@ -23,7 +23,7 @@ const BorrowBook = () => {
   return (
     <div>
        <div className="general-form">
-     
+       <h4 style={{ color:  'rgb(255, 157, 0)'}}>Borrow Book</h4>
       <form>
         <label htmlFor="bookid">Book id</label>
         <input name='bookid' id='bookid' className='Minputs' placeholder='Bookid'
@@ -55,12 +55,16 @@ const BorrowBook = () => {
          onChange={handlechange}
          value={Borrowbookdata.period}/>
          
-           <button>Back</button> 
-        <button>Delete</button> 
-        <button onClick={handlesubmit}>Save</button>
-
+        
        </form>
        </div>
+
+       <div className='btnclass'>
+        <button>Back</button> 
+        <button>Delete</button> 
+        <button onClick={handlesubmit}>Save</button>
+        </div>
+
     </div>
   )
 }
