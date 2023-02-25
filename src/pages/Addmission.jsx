@@ -38,7 +38,7 @@ function Addmission() {
       <div className="adm-form">
 <div className="adm-split">
       <Form.Group className="mb-3" >
-        <Form.Label>Students Name</Form.Label>
+        <Form.Label>Student Name</Form.Label>
         <Form.Control onChange={(e)=>setForm({...form,name:e.target.value})} type="text" placeholder="Enter Student Name" />
       </Form.Group>
       <Form.Group className="mb-3" >
