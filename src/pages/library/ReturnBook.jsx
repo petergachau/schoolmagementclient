@@ -14,7 +14,7 @@ const [form,setForm]=useState({
 
   return (
     <div className="general-form" >
-      <h4>Return a Book</h4>
+      <h2>Return a Book</h2>
       <form >
         
           <label htmlFor="">Book id</label>

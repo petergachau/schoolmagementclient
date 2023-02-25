@@ -5,7 +5,7 @@ const Library = () => {
   return (
  
 <main className="mainFinanace">
-    <h3>SMS Finance Department</h3>
+    <h2> Library Department</h2>
     <div className="top-levels">
         <button className="btn">
             <Link className='link' to='/registration'>

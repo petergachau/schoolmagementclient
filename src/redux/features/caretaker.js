@@ -7,7 +7,7 @@ export const createCareTaker = createAsyncThunk(
   "caretaker/createCareTaker",
   async (updateddata) => {
     try {
-      const response = await api.createCareTaker(updateddata)
+      const response = await api.createcaretakernotice(updateddata)
 
       return response.data;
     } catch (error) {

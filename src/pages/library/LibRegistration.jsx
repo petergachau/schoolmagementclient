@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import FileBase from "react-file-base64";
 
 const LibRegistration = () => {
 
@@ -6,7 +7,7 @@ const [form,setForm]=useState({
   name:'',
   class:'',
   regNo:'',
-  photo:'',
+ 
   stream:'',
   date:'',
 })
@@ -24,14 +25,22 @@ const [form,setForm]=useState({
         <input type="text" placeholder='class' onChange={(e)=>setForm({...form,class:e.target.value})} className='Minputs' />
         <label htmlFor="">reg number</label>
         <input type="text" placeholder='adsmission number' onChange={(e)=>setForm({...form,regNo:e.target.value})} className='Minputs' />
-      <label htmlFor="">photo</label>
-        <input type="text" placeholder='photo' onChange={(e)=>setForm({...form,photo:e.target.value})} className='Minputs' />
          <label htmlFor="" >stream</label>
         <input type="text" placeholder='stream' onChange={(e)=>setForm({...form,stream:e.target.value})} className='Minputs'  />
        
         
         <label htmlFor="">date</label>
         <input type="date"  onChange={(e)=>setForm({...form,date:e.target.value})}  className='Minputs' />
+        <p>photo eg,png,jpeg</p>
+      <FileBase
+      style={{width:'100'}}
+              type="file"
+              placeholder='mpesa screenshot'
+              multiple={false}
+              onDone={({ base64 }) =>
+                setForm({ ...form, imageFile: base64 })
+              }
+            />
         <button className="btn">
           Submit
         </button>

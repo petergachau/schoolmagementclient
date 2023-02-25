@@ -1,8 +1,14 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { useParams } from 'react-router-dom'
+import { toast } from 'react-toastify'
+import { createSummary } from '../../redux/features/summarySlice'
 
 function Medicalform() {
+  const dispatch=useDispatch()
+
   const[studenttokens,SetStudenttokens]=React.useState({
-    name:"", id:"",token:"",year:"",subjectchampion:""
+    name:"", id:"",sub:'',token:"",year:"", subject:""
   })
   function handlechange(event){
     SetStudenttokens(
@@ -14,16 +20,25 @@ function Medicalform() {
     )
 
   }
-  function handlesubmit(event)
-  {
-  event.preventDefault()
-  console.log(studenttokens)
+  const handleSubmit=(e)=>{
+    e.preventDefault()
+    // e.target.reset();
+         if (studenttokens){
+          const updateddata={...studenttokens}
+         if(!id){
+          dispatch(createSummary(updateddata,toast))
+          // navigate('/student')
+         }
+         
+         
+         }
   }
+  const {id}=useParams
   return (
     <div>
        <div className="general-form">
        <h4 style={{ color:  'rgb(255, 157, 0)'}}>Students Tokens</h4>
-         <form >
+         <form onSubmit={handleSubmit}>
           
           <label htmlFor="name">Name</label>
        <input name='name' id='name' className='Minputs' placeholder='Name'
@@ -46,13 +61,18 @@ function Medicalform() {
       <input type="text" name='year' placeholder='Year' className='Minputs' id='year' 
        onChange={handlechange}
        />
+        <label htmlFor="sub" >Subject</label>
+      <input type="text" name='sub' placeholder='subject' className='Minputs' id='sub' 
+       onChange={handlechange}
+       />
         
        
-       <label htmlFor='subjectchampion' >Subject Champion</label>
-       <input name='subjectchampion' type="text" id='subjectchampion' className='Minputs'
-        onChange={handlechange}
-       />
-       
+      
+                     
+<button className="btn">
+          Submit
+        </button>
+
            
          
    
@@ -61,7 +81,6 @@ function Medicalform() {
     <div className='btnclass'>
         <button>Back</button> 
         <button>Delete</button> 
-        <button onClick={handlesubmit}>Save</button>
         </div>
     </div>
   )

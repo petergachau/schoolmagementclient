@@ -5,6 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 
 import { useDispatch, useSelector } from "react-redux";
 import { createSummary } from '../../redux/features/summarySlice';
+import { createCareTaker } from '../../redux/features/caretaker';
 
 const StudentsFees = () => {
   const dispatch=useDispatch()
@@ -18,7 +19,7 @@ const StudentsFees = () => {
      const handleSubmit=(e)=>{
         e.preventDefault()
         e.target.reset();
-        dispatch(createSummary({...form,toast}))
+        dispatch(createCareTaker({...form,toast}))
 
      }
   return (

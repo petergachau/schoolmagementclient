@@ -1,6 +1,11 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { createSupplies } from '../../redux/features/suppliesSlice'
+import {toast} from 'react-toastify'
 
 function Storesupplies() {
+  const dispatch=useDispatch()
+
   const[Storesuppliesdata,setStoresuppliesdata]=React.useState({
     itemdescription:"",quantitysupplied:"",date:"",suppliername:""
    })
@@ -14,23 +19,25 @@ function Storesupplies() {
      )
    }
    
-   const handlesubmit=(event)=>{
-     event.preventDefault()
-     console.log(Storesuppliesdata)
-    
- 
-   }
+   const handleSubmit=(e)=>{
+    e.preventDefault()
+    // e.target.reset();
+             dispatch(createSupplies({...Storesuppliesdata, toast}))
+
+
+ }
+
   return (
     <div>
        <div className="general-form">
        <h4 style={{ color:  'rgb(255, 157, 0)'}}>Store Supplies</h4>
-        <form >
-         <label htmlFor="itemdescription">Book id</label>
+        <form onSubmit={handleSubmit} >
+         <label htmlFor="itemdescription">Item Descriptio</label>
         <input name='itemdescription' id='itemdescription' className='Minputs' placeholder='itemdescription'
         onChange={handlechange}
         value={Storesuppliesdata.itemdescription}/>
 
-        <label htmlFor='quantitysupplied'>Pupils ID</label>
+        <label htmlFor='quantitysupplied'>Quantity Supplied</label>
         <input name='quantitysupplied' placeholder='quantitysupplied' id='quantitysupplied' className='Minputs'
         onChange={handlechange}
         value={Storesuppliesdata.quantitysupplied}/>
@@ -40,19 +47,16 @@ function Storesupplies() {
         onChange={handlechange} 
         value={Storesuppliesdata.date}/>
 
-        <label htmlFor='suppliername'>Author</label>
+        <label htmlFor='suppliername'>Supplier Name</label>
         <input name='suppliername' placeholder='suppliername' id='suppliername' className='Minputs'
         onChange={handlechange}
         value={Storesuppliesdata.suppliername}/>
+        <button >Save</button>
 
      
     </form>
     </div>
-    <div className='btnclass'>
-        <button>Back</button> 
-        <button>Delete</button> 
-        <button onClick={handlesubmit}>Save</button>
-        </div>
+   
     </div>
   )
 }

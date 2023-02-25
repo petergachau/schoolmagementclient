@@ -37,7 +37,7 @@ const StudentsFees = () => {
     const handleSubmit= (e)=>{
     
       e.preventDefault()
-      e.target.reset();
+      // e.target.reset();
       
        dispatch(createProject({...form, toast}))
        
@@ -60,7 +60,7 @@ const StudentsFees = () => {
         </form>
         
     </div>
-
+{/* 
 {stuffs.map((i)=>{
   return(
           <div className="students-fees">
@@ -73,7 +73,7 @@ const StudentsFees = () => {
 
   )
   
-})}
+})} */}
     </>
   )
 }

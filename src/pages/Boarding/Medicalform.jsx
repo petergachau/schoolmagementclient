@@ -1,37 +1,51 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import FileBase from "react-file-base64";
 
+import {toast} from 'react-toastify'
+import { createMedical } from '../../redux/features/medicalSlice';
 function Medicalform() {
-  const[medicalform,SetMedicalform]=React.useState({
+  const dispatch=useDispatch()
+
+  const[medicalform,setMedicalform]=React.useState({
     name:"",id:"",photo:"",class:"",illness:"",recommend:""
   })
   function handlechange(event){
-    SetMedicalform(
+    setMedicalform(
       Prevmedicalform=>{
         return{
           ...Prevmedicalform,[event.target.name]:event.target.value
         }
       }
     ) }
-    function handlesubmit(event){
-     event.preventDefault()
-     console.log(medicalform)
-    }
+   
+
+    const handleSubmit=(e)=>{
+      e.preventDefault()
+      // e.target.reset();
+               dispatch(createMedical({...medicalform, toast}))
+  
+  
+   }
+
   return (
     <div>
         <div className="general-form">
         <h4 style={{ color:  'rgb(255, 157, 0)'}}>Medical form</h4>
-         <form >
+         <form onSubmit={handleSubmit} >
           
           <label htmlFor="name">Name</label>
        <input name='name' id='name' className='Minputs' placeholder='Name'
         onChange={handlechange}
         />
 
-       <label htmlFor='photo'>Photo</label>
-      
-       <input name='photo' type="file" id='photo' className='photoinput'
-        onChange={handlechange}
-        />
+<FileBase
+                type="file"
+                multiple={false}
+                onDone={({ base64 }) =>
+                setMedicalform({ ...medicalform, photo: base64 })
+                }
+              />
          <label htmlFor="class" >class</label>
        <input type="text" name='class' placeholder='Class' className='Minputs' id='class' 
         onChange={handlechange}
@@ -53,14 +67,11 @@ function Medicalform() {
        <input name='recommend' type="text"  id='date' className='Minputs'
         onChange={handlechange}
         /> 
-     
+             <button >Save</button>
+
    </form>
     </div>
-    <div className='btnclass'>
-        <button>Back</button> 
-        <button>Delete</button> 
-        <button onClick={handlesubmit}>Save</button>
-        </div>
+   
     </div>
   )
 }

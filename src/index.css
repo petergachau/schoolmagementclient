@@ -3,7 +3,7 @@ body {
   @import url('https://fonts.googleapis.com/css2?family=Abel&family=Courgette&family=Gentium+Plus:ital,wght@1,700&family=Kanit:wght@300&family=Lobster+Two&family=Oswald:wght@300;400&display=swap');
   padding: 0;
   box-sizing: border-box;
-  background-color: rgb(62, 84, 86);
+  background-color: rgb(62, 84, 86) !important;
   font-weight: 700;
   font-size: 1.1rem;
   
@@ -65,7 +65,7 @@ body {
 .link{
   text-decoration: none;
   /* color: black!important; */
-  color: rgb(255, 255, 255) !important;
+  color: rgb(10, 10, 10) !important;
 }
 
 .mainFinanace{
@@ -109,18 +109,21 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  background-color: rgb(66, 62, 55);
+  /* background-color: rgb(66, 62, 55); */
   width: 55%;
   align-items: center;
   padding: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
 }
 .std-form input{
   width: 16rem;
   border: none;
   outline: none;
-  border-radius: 0.5rem;
-  height: 1.3rem;
+  border-radius: 0.3rem;
+  height: 1.7rem;
+}
+.std-form label{
+  color: aliceblue;
 }
 .totalexpense{
   display: flex;
@@ -203,7 +206,7 @@ form{
   width: 12rem;
 }
 .loginputs,.reginputs{
-  height: 50px;
+  height: 35px;
   width: 250px;
   background-color:rgb(232, 240, 254);
  
@@ -264,8 +267,12 @@ label{
   font-weight: 100px;
   color: rgb(0, 0, 0);
 }
+.btn{
+  background-color: whitesmoke !important;
+  color: #000 !important;
+}
 .Minputs{
-  height: 50px;
+  height:2rem;
   width: 250px;
   background-color: rgb(232, 240, 254);;
   margin-bottom: 30px;
@@ -348,3 +355,80 @@ label{
   opacity: 1;
  }
 
+.all-reports{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center !important;
+  margin-top: 5rem;
+  gap: 30%;
+  flex-wrap: wrap;
+}
+.reports-split{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 30% !important;
+
+}
+
+.reports-split Button{
+  margin-top: 3rem;
+}
+
+/* admission */
+.adm-form{
+  width: 100% !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+.adm-forms{
+  width: 100% !important;
+  display: flex;
+  
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.adm-form Label{
+  color: aliceblue !important;
+
+}
+
+/* .adm-form Select Form.Control{
+  width: 80% !important;
+
+} */
+
+.select{
+  width: 18% !important;
+}
+.selects{
+  width: 100% !important;
+}
+h2{
+  text-align: center !important;
+  color: whitesmoke !important;
+}
+
+
+ /* footer */
+
+ .footer{
+  /* padding-top: 70px; */
+  /* padding-bottom: 30px; */
+  color: white !important;
+ margin-top: 10rem;
+  position: sticky;
+}
+.copyright{
+  text-align: center;
+}

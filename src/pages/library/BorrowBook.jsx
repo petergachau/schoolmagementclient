@@ -1,6 +1,12 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { useParams } from 'react-router-dom'
+import { toast } from 'react-toastify'
+import { createVacation } from '../../redux/api'
+import { createBorrow } from '../../redux/features/Borrow'
 
 const BorrowBook = () => {
+  const dispatch=useDispatch()
   const[Borrowbookdata,setBorrowbookdata]=React.useState({
     bookid:"",isnbno:"",booktitle:"",author:"",period:"",date:""
    })
@@ -14,17 +20,25 @@ const BorrowBook = () => {
      )
    }
    
-   const handlesubmit=(event)=>{
-     event.preventDefault()
-     console.log(Borrowbookdata)
-    
- 
-   }
+   const handleSubmit=(e)=>{
+    e.preventDefault()
+    e.target.reset();
+         if (Borrowbookdata){
+          const updateddata={...Borrowbookdata}
+         if(!id){
+          dispatch(createBorrow(updateddata,toast))
+          // navigate('/student')
+         }
+         
+         
+         }
+  }
+  const {id}=useParams
   return (
     <div>
        <div className="general-form">
        <h4 style={{ color:  'rgb(255, 157, 0)'}}>Borrow Book</h4>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="bookid">Book id</label>
         <input name='bookid' id='bookid' className='Minputs' placeholder='Bookid'
          onChange={handlechange}
@@ -50,20 +64,17 @@ const BorrowBook = () => {
          onChange={handlechange}
          value={Borrowbookdata.date}/>
         
-        <label htmlFor="period" >Period</label>
-        <input type="text" placeholder='Period' className='Minputs' id='period' name='period' 
+        <label htmlFor="period in days" >Period</label>
+        <input type="number" placeholder='Period in days' className='Minputs' id='period' name='period' 
          onChange={handlechange}
          value={Borrowbookdata.period}/>
          
-        
+       <button>Submit</button>
+
        </form>
        </div>
 
-       <div className='btnclass'>
-        <button>Back</button> 
-        <button>Delete</button> 
-        <button onClick={handlesubmit}>Save</button>
-        </div>
+       
 
     </div>
   )

@@ -12,6 +12,12 @@ import expenseReducer from './features/expenses'
 import userReducer from './features/userCrudSlice'
 import summaryReducer from './features/summarySlice'
 import messageReducer from "./features/messageSlice";
+import admissionReducer from "./features/AdmissionSlice";
+import boardingReducer from "./features/boarding";
+import medicalReducer from "./features/medicalSlice";
+import issuesReducer from "./features/issuesSlice";
+import suppliesReducer from "./features/suppliesSlice";
+import borrowReducer from "./features/Borrow";
 
 export default configureStore({
   reducer: {
@@ -28,5 +34,12 @@ export default configureStore({
     user:userReducer,
     summary:summaryReducer,
     message:messageReducer,
+    admission:admissionReducer,
+    boarding:boardingReducer,
+    medical:medicalReducer,
+    issues:issuesReducer,
+    supplies:suppliesReducer,
+    borrow:borrowReducer,
+
   },
 });

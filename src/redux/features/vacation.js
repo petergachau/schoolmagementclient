@@ -6,9 +6,9 @@ import { url,setHeaders } from "./api";
 
 export const createVacation = createAsyncThunk(
   "projects/createVacation",
-  async (values) => {
+  async (updateddata) => {
     try {
-      const response = await api.createVacation(values)
+      const response = await api.createVacation(updateddata)
 
       return response.data;
     } catch (error) {

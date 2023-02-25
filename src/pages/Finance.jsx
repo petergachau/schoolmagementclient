@@ -80,7 +80,7 @@ const Finance = () => {
     <>
   
 <main className="mainFinanace">
-    <h3>SMS Finance Department</h3>
+    <h3 style={{color:'white'}}> Finance Department</h3>
     <div className="top-levels">
         <button className="btn">
             <Link className='link' to='/studentfees'>
@@ -92,11 +92,16 @@ const Finance = () => {
               School Clinic Dpt  
                 </Link>
             </button>
-        <button className="btn">
+        {/* <button className="btn">
         <Link className='link' to='/procurement'>
              Procurement  
                 </Link> 
-            </button>
+            </button> */}
+            <button className="btn">
+    <Link className='link' to='/libraydpt'>
+            Library Dpt  
+                </Link>
+        </button>
     </div>
     <div className="lower-levels">
     <button className="btn">
@@ -104,11 +109,7 @@ const Finance = () => {
              Students Boarding Dpt 
                 </Link>
         </button>
-    <button className="btn">
-    <Link className='link' to='/libraydpt'>
-            Library Dpt  
-                </Link>
-        </button>
+    
     <button className="btn">
     <Link  className='link' to='/staffworkers'>
                Staffs and Workers
@@ -117,67 +118,7 @@ const Finance = () => {
     </div>
 </main>
 <hr />
-<div className="totalexpense">
-  
 
-<h2>Finance Summary</h2>
- 
- 
-
-  
-
-
-
- 
-  
-  
-{library.map((ib)=>{
-  return(
-    <>
-
-{fees.map((i)=>{
-  return(
-    <>
-   <h3>Total fees : {i.total} </h3>
- 
-
-{boarding.map((id)=>{
-  return(
-    <>
-    <h3>Total budget for bording Dpt: {id.total+id.total2}</h3>
- 
-
-{users.map((user)=>{
-  return(
-   <>
-      <h3> total budget for school clinic: {user.total+user.total2}</h3>
-    
- 
-
-
-    <h3>Total Library Budget: {ib.total+ib.total2}</h3>
-  
-
-  
-  
-  {stuffs.map((ia)=>{
-  return(
-    <>
-    <h3>Total Stuffs and workers Budget: {ia.total}</h3>
-Monthly Revenue: {i.total-ia.total+ib.total+ib.total2+user.total+user.total2+id.total+id.total2}
- </>   
-  )
-})}
-</> )
-})}
-</> )
-})}
-
-</> 
-)
-})}</>)})}
-  
-</div>
 </>
   )
 }

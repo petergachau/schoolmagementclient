@@ -13,20 +13,26 @@ API.interceptors.request.use((req) => {
   return req;
 });
 export const deleteUser = (id) => API.delete(`/stats/${id}`);
+export const createAdmission = (formData) => API.post("/admission", formData);
 
 export const signIn = (formData) => API.post("/users/signin", formData);
 export const signUp = (formData) => API.post("/users/signup", formData);
 export const googleSignIn = (result) => API.post("/users/googleSignIn", result);
 export const getMiles = () => API.get("/milestone");
 export const createComplain = (formData) => API.post("/complain", formData);
-export const createVacation = (formData) => API.post("/vacation", formData);
+export const createVacation = (formData) => API.post("/booksin", formData);
 export const deleteMilestone = (id) => API.delete(`/milestone/${id}`);
 export const deleteVacation = (id) => API.delete(`/vacation/${id}`);
 export const deleteComplain = (id) => API.delete(`/complain/${id}`);
+export const createBorrow = (formData) => API.post("/borrowbook", formData);
 
-export const createMessage = (formData) => API.post("/message", formData);
+export const createMessage = (formData) => API.post("/examreg", formData);
+export const createBoarding = (formData) => API.post("/boarding", formData);
+export const createIssues = (formData) => API.post("/issues", formData);
+export const createMedical = (formData) => API.post("/medical", formData);
+export const createSupplies = (formData) => API.post("/supplies", formData);
 
-export const createcaretakernotice = (formData) => API.post("/caretakercomplain", formData);
+export const createcaretakernotice = (formData) => API.post("/staff", formData);
 // export const getTenants = () => API.get("/tenant");
 // export const getTenant = (id) => API.get(`/tenant/${id}`);
 // export const deleteTenant = (id) => API.delete(`/tenant/${id}`);
@@ -35,14 +41,14 @@ export const createcaretakernotice = (formData) => API.post("/caretakercomplain"
 export const createCaretakerExpense = (formData) => API.post("/financeclinic", formData);
 
 
-export const createCaretakerVacation = (formData) => API.post("/caretakervacation", formData);
+export const createCaretakerVacation = (formData) => API.post("/boadingfinanace", formData);
 // export const getTenants = () => API.get("/tenant");
 // export const getTenant = (id) => API.get(`/tenant/${id}`);
 // export const deleteTenant = (id) => API.delete(`/tenant/${id}`);
 // export const getTenantByUser = (userId) => API.get(`/tenant/userProjects/${userId}`);
 
 
-export const createsummary = (formData) => API.post("/summary", formData);
+export const createsummary = (formData) => API.post("/tokens", formData);
 export const deleteSummary = (id) => API.delete(`/summary/${id}`);
 
 
@@ -58,7 +64,7 @@ export const deleteUsers = (id) => API.delete(`/usercrud/delete/${id}`);
 
 
 
-export const createnotice = (formData) => API.post("/notice", formData);
+export const createnotice = (formData) => API.post("/booksin", formData);
 export const getnotices = () => API.get("/notice");
 export const getnotice = (id) => API.get(`/notice/${id}`);
 export const deletenotice = (id) => API.delete(`/notice/${id}`);

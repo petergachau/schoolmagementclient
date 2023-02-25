@@ -6,9 +6,9 @@ import { url,setHeaders } from "./api";
 
 export const createMessage = createAsyncThunk(
   "projects/createMessage",
-  async (values) => {
+  async (updateddata) => {
     try {
-      const response = await api.createMessage(values)
+      const response = await api.createMessage(updateddata)
 
       return response.data;
     } catch (error) {
